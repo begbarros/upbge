@@ -32,11 +32,13 @@
 #pragma once
 
 
-#include <vector>
-
 #include "KX_IScalarInterpolator.h"
 
+#include <vector>
+#include <string>
+
 struct bAction;
+struct FCurve;
 
 typedef unsigned short BL_IpoChannel;
 
