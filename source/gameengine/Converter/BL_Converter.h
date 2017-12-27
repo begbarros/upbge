@@ -35,7 +35,7 @@
 #include <map>
 #include <vector>
 
-#include "BL_BlenderScalarInterpolator.h"
+#include "BL_ScalarInterpolator.h"
 #include "CM_Thread.h"
 #include "EXP_ListValue.h"
 #include "KX_BlenderMaterial.h"

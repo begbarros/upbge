@@ -52,7 +52,7 @@
 #include "DNA_world_types.h"
 
 #include "BL_Converter.h"
-#include "BL_BlenderScalarInterpolator.h"
+#include "BL_ScalarInterpolator.h"
 #include "KX_CameraIpoSGController.h"
 #include "KX_GameObject.h"
 #include "KX_Globals.h"
