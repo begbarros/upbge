@@ -25,7 +25,7 @@
  * ***** END GPL LICENSE BLOCK *****
  */
 
-/** \file BL_BlenderSceneConverter.h
+/** \file BL_SceneConverter.h
  *  \ingroup bgeconv
  */
 
@@ -41,7 +41,7 @@ class SCA_IActuator;
 class SCA_IController;
 class RAS_MeshObject;
 class KX_BlenderMaterial;
-class BL_BlenderConverter;
+class BL_Converter;
 class KX_GameObject;
 class KX_Scene;
 class KX_LibLoadStatus;
@@ -54,8 +54,8 @@ struct Material;
 struct bActuator;
 struct bController;
 
-class BL_BlenderSceneConverter {
-  friend BL_BlenderConverter;
+class BL_SceneConverter {
+  friend BL_Converter;
 
  private:
   std::vector<KX_BlenderMaterial *> m_materials;
@@ -68,11 +68,11 @@ class BL_BlenderSceneConverter {
   std::map<bController *, SCA_IController *> m_map_blender_to_gamecontroller;
 
  public:
-  BL_BlenderSceneConverter() = default;
-  ~BL_BlenderSceneConverter() = default;
+  BL_SceneConverter() = default;
+  ~BL_SceneConverter() = default;
 
   // Disable dangerous copy.
-  BL_BlenderSceneConverter(const BL_BlenderSceneConverter &other) = delete;
+  BL_SceneConverter(const BL_SceneConverter &other) = delete;
 
   void RegisterGameObject(KX_GameObject *gameobject, Object *for_blenderobject);
   void UnregisterGameObject(KX_GameObject *gameobject);

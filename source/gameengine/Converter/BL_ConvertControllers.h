@@ -39,6 +39,6 @@ void BL_ConvertControllers(struct Object *blenderobject,
                            class SCA_LogicManager *logicmgr,
                            int activeLayerBitInfo,
                            bool isInActiveLayer,
-                           class BL_BlenderSceneConverter *converter,
+                           class BL_SceneConverter *converter,
                            bool libloading);
 

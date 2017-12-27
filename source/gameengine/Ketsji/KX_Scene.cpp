@@ -51,9 +51,9 @@
 #include "depsgraph/DEG_depsgraph_query.h"
 #include "windowmanager/wm_draw.h"
 
-#include "BL_BlenderConverter.h"
+#include "BL_Converter.h"
 #include "BL_BlenderDataConversion.h"
-#include "BL_BlenderSceneConverter.h"
+#include "BL_SceneConverter.h"
 #include "EXP_FloatValue.h"
 #include "KX_2DFilterManager.h"
 #include "KX_BlenderCanvas.h"
@@ -841,7 +841,7 @@ void KX_Scene::RenderAfterCameraSetupImageRender(KX_Camera *cam,
   DRW_game_render_loop(C, m_currentGPUViewport, bmain, depsgraph, window, true, false);
 }
 
-void KX_Scene::SetBlenderSceneConverter(BL_BlenderSceneConverter *sc_converter)
+void KX_Scene::SetBlenderSceneConverter(BL_SceneConverter *sc_converter)
 {
   m_sceneConverter = sc_converter;
 }
@@ -900,7 +900,7 @@ struct ConvertBlenderObjectsListTaskData {
   KX_KetsjiEngine *engine;
   e_PhysicsEngine physics_engine;
   KX_Scene *kxscene;
-  BL_BlenderSceneConverter *converter;
+  BL_SceneConverter *converter;
   RAS_Rasterizer *rasty;
   RAS_ICanvas *canvas;
   Depsgraph *depsgraph;
@@ -1000,7 +1000,7 @@ struct ConvertBlenderCollectionTaskData {
   KX_KetsjiEngine *engine;
   e_PhysicsEngine physics_engine;
   KX_Scene *kxscene;
-  BL_BlenderSceneConverter *converter;
+  BL_SceneConverter *converter;
   RAS_Rasterizer *rasty;
   RAS_ICanvas *canvas;
   Depsgraph *depsgraph;

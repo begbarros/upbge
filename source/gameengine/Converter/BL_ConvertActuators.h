@@ -40,5 +40,5 @@ void BL_ConvertActuators(const char *maggiename,
                          class KX_KetsjiEngine *ketsjiEngine,
                          int activeLayerBitInfo,
                          bool isInActiveLayer,
-                         class BL_BlenderSceneConverter *converter);
+                         class BL_SceneConverter *converter);
 

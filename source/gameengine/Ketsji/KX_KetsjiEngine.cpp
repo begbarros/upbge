@@ -44,7 +44,7 @@
 #include "GPU_matrix.h"
 #include "GPU_state.h"
 
-#include "BL_BlenderConverter.h"
+#include "BL_Converter.h"
 #include "CM_Message.h"
 #include "DEV_Joystick.h"  // for DEV_Joystick::HandleEvents
 #include "KX_Camera.h"
@@ -223,7 +223,7 @@ PyObject *KX_KetsjiEngine::GetPyProfileDict()
 }
 #endif
 
-void KX_KetsjiEngine::SetConverter(BL_BlenderConverter *converter)
+void KX_KetsjiEngine::SetConverter(BL_Converter *converter)
 {
   BLI_assert(converter);
   m_converter = converter;

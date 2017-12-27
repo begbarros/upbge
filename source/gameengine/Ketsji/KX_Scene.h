@@ -83,7 +83,7 @@ class RAS_2DFilterManager;
 class KX_2DFilterManager;
 class SCA_JoystickManager;
 class btCollisionShape;
-class BL_BlenderSceneConverter;
+class BL_SceneConverter;
 struct KX_ClientObjectInfo;
 class KX_ObstacleSimulation;
 struct TaskPool;
@@ -131,7 +131,7 @@ class KX_Scene : public CValue, public SCA_IScene {
   struct GPUViewport *m_initMaterialsGPUViewport;
   KX_Camera *m_overlayCamera;
   std::vector<KX_Camera *> m_imageRenderCameraList;
-  BL_BlenderSceneConverter *m_sceneConverter;
+  BL_SceneConverter *m_sceneConverter;
   bool m_isPythonMainLoop;
   std::vector<KX_GameObject *> m_kxobWithLod;
   std::map<Object *, char> m_obRestrictFlags;
@@ -520,7 +520,7 @@ class KX_Scene : public CValue, public SCA_IScene {
     return m_dbvt_occlusion_res;
   }
 
-  void SetBlenderSceneConverter(class BL_BlenderSceneConverter *sceneConverter);
+  void SetBlenderSceneConverter(class BL_SceneConverter *sceneConverter);
 
   class PHY_IPhysicsEnvironment *GetPhysicsEnvironment()
   {

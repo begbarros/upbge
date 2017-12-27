@@ -74,10 +74,10 @@ set(SRC
   BL_ArmatureChannel.cpp
   BL_ArmatureConstraint.cpp
   BL_ArmatureObject.cpp
-  BL_BlenderConverter.cpp
+  BL_Converter.cpp
   BL_BlenderDataConversion.cpp
   BL_BlenderScalarInterpolator.cpp
-  BL_BlenderSceneConverter.cpp
+  BL_SceneConverter.cpp
   BL_ConvertActuators.cpp
   BL_ConvertControllers.cpp
   BL_ConvertProperties.cpp
@@ -89,10 +89,10 @@ set(SRC
   BL_ArmatureChannel.h
   BL_ArmatureConstraint.h
   BL_ArmatureObject.h
-  BL_BlenderConverter.h
+  BL_Converter.h
   BL_BlenderDataConversion.h
   BL_BlenderScalarInterpolator.h
-  BL_BlenderSceneConverter.h
+  BL_SceneConverter.h
   BL_ConvertActuators.h
   BL_ConvertControllers.h
   BL_ConvertProperties.h

@@ -25,7 +25,7 @@
  * ***** END GPL LICENSE BLOCK *****
  */
 
-/** \file BL_BlenderConverter.h
+/** \file BL_Converter.h
  *  \ingroup bgeconv
  */
 
@@ -42,7 +42,7 @@
 #include "RAS_MeshObject.h"
 
 class CStringValue;
-class BL_BlenderSceneConverter;
+class BL_SceneConverter;
 class KX_KetsjiEngine;
 class KX_LibLoadStatus;
 class KX_BlenderMaterial;
@@ -64,7 +64,7 @@ struct Depsgraph;
 
 template<class Value> using UniquePtrList = std::vector<std::unique_ptr<Value>>;
 
-class BL_BlenderConverter {
+class BL_Converter {
  private:
   class SceneSlot {
    public:
@@ -75,11 +75,11 @@ class BL_BlenderConverter {
     std::map<bAction *, BL_InterpolatorList *> m_actionToInterp;
 
     SceneSlot();
-    SceneSlot(const BL_BlenderSceneConverter *converter);
+    SceneSlot(const BL_SceneConverter *converter);
     ~SceneSlot();
 
     void Merge(SceneSlot &other);
-    void Merge(const BL_BlenderSceneConverter *converter);
+    void Merge(const BL_SceneConverter *converter);
   };
 
   std::map<KX_Scene *, SceneSlot> m_sceneSlots;
@@ -100,8 +100,8 @@ class BL_BlenderConverter {
   bool m_alwaysUseExpandFraming;
 
  public:
-  BL_BlenderConverter(Main *maggie, KX_KetsjiEngine *engine);
-  virtual ~BL_BlenderConverter();
+  BL_Converter(Main *maggie, KX_KetsjiEngine *engine);
+  virtual ~BL_Converter();
 
   /** \param Scenename name of the scene to be converted.
    * \param destinationscene pass an empty scene, everything goes into this

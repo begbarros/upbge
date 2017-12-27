@@ -40,5 +40,5 @@ void BL_ConvertSensors(struct Object *blenderobject,
                        int activeLayerBitInfo,
                        bool isInActiveLayer,
                        class RAS_ICanvas *canvas,
-                       class BL_BlenderSceneConverter *converter);
+                       class BL_SceneConverter *converter);
 

@@ -44,7 +44,7 @@
 #include "RNA_access.h"
 
 #include "BL_Action.h"
-#include "BL_BlenderSceneConverter.h"
+#include "BL_SceneConverter.h"
 #include "KX_Globals.h"
 
 /**
@@ -228,7 +228,7 @@ BL_ArmatureObject::~BL_ArmatureObject()
   //}
 }
 
-void BL_ArmatureObject::LoadConstraints(BL_BlenderSceneConverter *converter)
+void BL_ArmatureObject::LoadConstraints(BL_SceneConverter *converter)
 {
   // first delete any existing constraint (should not have any)
   m_controlledConstraints->ReleaseAndRemoveAll();

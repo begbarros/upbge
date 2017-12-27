@@ -36,7 +36,7 @@
 #include "DNA_scene_types.h"
 #include "wm_event_types.h"
 
-#include "BL_BlenderConverter.h"
+#include "BL_Converter.h"
 #include "BL_BlenderDataConversion.h"
 #include "CM_Message.h"
 #include "DEV_EventConsumer.h"
@@ -237,7 +237,7 @@ void LA_Launcher::InitEngine()
 #endif  // WITH_PYTHON
 
   // Create a scene converter, create and convert the stratingscene.
-  m_converter = new BL_BlenderConverter(m_maggie, m_ketsjiEngine);
+  m_converter = new BL_Converter(m_maggie, m_ketsjiEngine);
   m_ketsjiEngine->SetConverter(m_converter);
 
   m_kxStartScene = new KX_Scene(

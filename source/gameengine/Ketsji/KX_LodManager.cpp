@@ -97,7 +97,7 @@ inline bool KX_LodManager::LodLevelIterator::operator>(float distance2) const
 KX_LodManager::KX_LodManager(Object *ob,
                              KX_Scene *scene,
                              RAS_Rasterizer *rasty,
-                             BL_BlenderSceneConverter *converter,
+                             BL_SceneConverter *converter,
                              bool libloading,
                              bool converting_during_runtime)
     : m_refcount(1), m_distanceFactor(1.0f)

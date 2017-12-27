@@ -34,7 +34,7 @@
 #include "BLI_sort.h"
 #include "MEM_guardedalloc.h"
 
-#include "BL_BlenderConverter.h"
+#include "BL_Converter.h"
 #include "CM_Message.h"
 #include "DetourStatNavMeshBuilder.h"
 #include "KX_Globals.h"

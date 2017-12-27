@@ -1077,7 +1077,7 @@ void KX_GameObject::UpdateBuckets()
 
 void KX_GameObject::RemoveMeshes()
 {
-  // note: meshes can be shared, and are deleted by BL_BlenderSceneConverter
+  // note: meshes can be shared, and are deleted by BL_SceneConverter
   m_meshes.clear();
 }
 
