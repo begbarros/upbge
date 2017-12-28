@@ -44,48 +44,36 @@ class KX_CameraIpoSGController : public SG_Controller {
   MT_Scalar m_clipstart;
   MT_Scalar m_clipend;
 
- private:
-  T_InterpolatorList m_interpolators;
-  unsigned short m_modify_lens : 1;
-  unsigned short m_modify_clipstart : 1;
-  unsigned short m_modify_clipend : 1;
-  bool m_modified;
+private:
+	T_InterpolatorList	m_interpolators;
+	unsigned short  	m_modify_lens 	 : 1;
+	unsigned short	    m_modify_clipstart       : 1;
+	unsigned short		m_modify_clipend    	 : 1;
 
-  double m_ipotime;
-
- public:
-  KX_CameraIpoSGController()
-      : m_modify_lens(false),
-        m_modify_clipstart(false),
-        m_modify_clipend(false),
-        m_modified(true),
-        m_ipotime(0.0)
-  {
-  }
+public:
+	KX_CameraIpoSGController() : 
+				m_modify_lens(false),
+				m_modify_clipstart(false),
+				m_modify_clipend(false)
+		{}
 
   ~KX_CameraIpoSGController();
   SG_Controller *GetReplica(class SG_Node *destnode);
   bool Update(double time);
 
-  void SetOption(int option, int value);
-
-  void SetSimulatedTime(double time)
-  {
-    m_ipotime = time;
-    m_modified = true;
-  }
-  void SetModifyLens(bool modify)
-  {
-    m_modify_lens = modify;
-  }
-  void SetModifyClipEnd(bool modify)
-  {
-    m_modify_clipend = modify;
-  }
-  void SetModifyClipStart(bool modify)
-  {
-    m_modify_clipstart = modify;
-  }
-  void AddInterpolator(KX_IInterpolator *interp);
+	void SetSimulatedTime(double time) {
+		m_ipotime = time;
+		m_modified = true;
+	}
+	void	SetModifyLens(bool modify) {
+		m_modify_lens = modify;
+	}
+	void	SetModifyClipEnd(bool modify) {
+		m_modify_clipend = modify;
+	}
+	void	SetModifyClipStart(bool modify) {
+		m_modify_clipstart = modify;
+	}
+	void	AddInterpolator(KX_IInterpolator* interp);
 };
 
